@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website and online store design — TARGETS</title>
+<meta name="description" content="Websites, online stores and custom systems in Arabic and English, fast on mobile and connected to WhatsApp, ads and online payments.">
+<meta name="theme-color" content="#161616">
+<link rel="canonical" href="https://targetsagency.com/en/web/">
+<link rel="alternate" hreflang="ar" href="https://targetsagency.com/web/">
+<link rel="alternate" hreflang="en" href="https://targetsagency.com/en/web/">
+<link rel="alternate" hreflang="x-default" href="https://targetsagency.com/web/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://targetsagency.com/en/web/">
+<meta property="og:title" content="Website and online store design — TARGETS">
+<meta property="og:description" content="Websites, online stores and custom systems in Arabic and English, fast on mobile and connected to WhatsApp, ads and online payments.">
+<meta property="og:image" content="https://targetsagency.com/assets/og.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../../assets/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700;800;900&family=Nunito+Sans:ital,opsz,wght@1,6..12,900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#FF4343;--deep:#802222;--coral:#FF8C75;--ink:#161616;--graphite:#5F6268;--mid:#96999F;--line:#E6E7E9;--soft:#F4F5F6;--pad:clamp(20px,8.3vw,120px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Alexandria',sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+.lat{font-family:'Nunito Sans',sans-serif;font-style:italic;font-weight:900;direction:ltr;unicode-bidi:isolate}
+.btn{display:inline-block;border-radius:999px;font-weight:700;transition:background .2s,border-color .2s}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--deep)}
+.btn-ghost{border:2px solid var(--graphite);color:#fff;font-weight:500}.btn-ghost:hover{border-color:#fff}
+a:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+h1,h2,h3,p{margin:0}
+h2{font-size:clamp(32px,3.1vw,44px);font-weight:900}
+
+/* header */
+header{background:var(--ink);position:sticky;top:0;z-index:10}
+header .wrap{height:clamp(72px,6.7vw,96px);display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;direction:ltr}
+.logo img{width:36px;height:38px}
+.logo span{font-size:30px;color:#fff;letter-spacing:.5px}
+nav.main{display:flex;gap:40px;align-items:center}
+nav.main a.lnk{color:var(--line);font-size:17px;font-weight:500}nav.main a.lnk:hover{color:#fff}
+nav.main .btn{font-size:17px;padding:14px 26px}
+nav.main a.lang{color:var(--line);font-size:15px;font-weight:700;border:1.5px solid var(--graphite);border-radius:999px;padding:8px 14px;letter-spacing:.5px}nav.main a.lang:hover{color:#fff;border-color:#fff}
+
+/* hero */
+.hero{background:var(--ink);overflow:hidden}
+.hero .wrap{min-height:720px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding-top:40px;padding-bottom:40px}
+.hero .kicker{color:var(--coral);font-size:18px;font-weight:700}
+.hero h1{color:#fff;font-size:clamp(40px,5vw,68px);line-height:1.15;font-weight:900}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{color:var(--line);font-size:clamp(17px,1.55vw,22px);line-height:1.7;max-width:560px}
+.hero .txt{display:flex;flex-direction:column;gap:28px}
+.hero .ctas{display:flex;gap:16px;margin-top:8px;flex-wrap:wrap}
+.hero .ctas .btn{font-size:20px;padding:20px 36px}
+.hero .ctas .btn-ghost{padding:18px 34px}
+.hero .art{display:flex;justify-content:center}
+.hero .art img{width:min(560px,100%)}
+
+/* funnel */
+.funnel{padding:110px 0;text-align:center}
+.funnel .wrap{display:flex;flex-direction:column;align-items:center;gap:44px}
+.funnel h2{font-size:clamp(34px,3.4vw,48px);line-height:1.3}
+.funnel h2 .ne{color:var(--red)}
+.steps{display:flex;align-items:center;gap:20px;list-style:none;margin:0;padding:0}
+.steps li{background:var(--soft);border-radius:16px;padding:22px 32px;font-size:22px;font-weight:700}
+.steps li.win{background:var(--red);color:#fff;font-weight:800}
+.steps .arr{background:none;padding:0;color:var(--mid);font-size:28px;font-weight:400}
+.funnel p{font-size:22px;color:var(--graphite);line-height:1.7}
+
+/* services */
+.services{background:var(--soft);padding:110px 0}
+.services .wrap{display:flex;flex-direction:column;gap:48px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.card{background:#fff;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:16px;min-height:300px}
+.card .num{font-size:40px;color:var(--red);text-align:left}
+.card h3{font-size:28px;font-weight:800}
+.card p{font-size:19px;line-height:1.75;color:var(--graphite)}
+.cards.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+a.card{transition:transform .2s,box-shadow .2s}a.card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(22,22,22,.08)}
+.card .more{margin-top:auto;color:var(--red);font-weight:700;font-size:17px}
+
+/* process */
+.process{padding:110px 0}
+.process .wrap{display:flex;flex-direction:column;gap:48px}
+.process ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.process li{border-top:4px solid var(--ink);padding-top:24px;display:flex;flex-direction:column;gap:12px}
+.process li:first-child{border-color:var(--red)}
+.process li b{font-size:26px;font-weight:800}
+.process li span{font-size:18px;line-height:1.7;color:var(--graphite)}
+
+/* sectors */
+.sectors{background:var(--soft);padding:100px 0}
+.sectors .wrap{display:flex;flex-direction:column;gap:36px}
+.sectors .head{display:flex;flex-direction:column;gap:12px}
+.sectors .head p{font-size:20px;color:var(--graphite);line-height:1.7}
+.chips{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:14px}
+.chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:14px 26px;font-size:19px;font-weight:500}
+
+/* about */
+.about{padding:100px 0}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:80px}
+.about .big{font-size:120px;line-height:1;color:var(--red);text-align:left}
+.about .cap{font-size:24px;font-weight:700;display:block;margin-top:8px}
+.about p{font-size:22px;line-height:1.8;color:var(--graphite)}
+
+/* cta */
+.cta{background:var(--ink);padding:120px 0;text-align:center}
+.cta .wrap{display:flex;flex-direction:column;align-items:center;gap:32px}
+.cta h2{font-size:clamp(36px,3.9vw,56px);color:#fff;line-height:1.3}
+.cta p{font-size:22px;color:var(--line);line-height:1.7}
+.cta .btn{font-size:22px;padding:22px 44px}
+
+/* footer */
+footer{background:#0E0E0E}
+footer .wrap{min-height:144px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+footer .logo img{width:28px;height:29px}footer .logo span{font-size:22px}
+footer nav{display:flex;gap:32px;direction:ltr}
+footer nav a{color:var(--line);font-size:17px}footer nav a:hover{color:var(--red)}
+footer small{color:var(--mid);font-size:15px;direction:ltr}
+
+/* mobile */
+@media (max-width:860px){
+  nav.main a.lnk{display:none}
+  nav.main{gap:8px}nav.main .btn{font-size:14px;padding:11px 14px;white-space:nowrap}
+  nav.main a.lang{font-size:13px;padding:7px 11px}
+  .logo img{width:24px;height:25px}.logo span{font-size:20px}.logo{gap:8px}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:48px;padding-bottom:64px;gap:22px}
+  .hero .art{order:-1}.hero .art img{width:240px}
+  .hero .kicker{font-size:14px}
+  .hero .ctas{flex-direction:column}
+  .hero .ctas .btn{text-align:center;font-size:18px;padding:18px 0}
+  .funnel,.services,.process,.sectors,.about{padding:72px 0}
+  .funnel .wrap{gap:24px}
+  .steps{flex-direction:column;align-items:stretch;gap:10px;width:100%}
+  .steps .arr{display:none}
+  .steps li{font-size:18px;padding:16px 20px;border-radius:14px;text-align:left}
+  .funnel p{font-size:17px}
+  .services .wrap,.process .wrap{gap:24px}
+  .cards{grid-template-columns:1fr;gap:20px}
+  .card{padding:28px;min-height:0;gap:12px;border-radius:20px}
+  .card .num{font-size:32px}.card h3{font-size:23px}.card p{font-size:17px}
+  .process ol{grid-template-columns:1fr;gap:22px}
+  .process li{border-top:0;border-left:4px solid var(--ink);padding:0 0 0 16px;gap:6px}
+  .process li:first-child{border-color:var(--red)}
+  .process li b{font-size:21px}.process li span{font-size:16px}
+  .sectors .wrap{gap:20px}.sectors .head p{font-size:16px}
+  .chips{gap:10px}.chips li{font-size:16px;padding:11px 18px}
+  .about .wrap{grid-template-columns:1fr;gap:16px}
+  .about .big{font-size:88px}.about .cap{font-size:20px}.about p{font-size:17px}
+  .cta{padding:80px 0}.cta p{font-size:17px}.cta .btn{font-size:18px;padding:18px 0;width:100%}
+  footer .wrap{flex-direction:column;justify-content:center;padding-top:36px;padding-bottom:36px;gap:18px}
+  footer nav{gap:20px;flex-wrap:wrap;justify-content:center}footer nav a{font-size:15px}
+  footer small{font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* service pages */
+nav.main a.lnk.on{color:#fff;box-shadow:inset 0 -2px 0 var(--red)}
+.phero{background:var(--ink)}
+.phero .wrap{padding-top:96px;padding-bottom:104px;display:flex;flex-direction:column;gap:26px;max-width:1440px}
+.phero .kicker{color:var(--coral);font-size:18px;font-weight:700}
+.phero h1{color:#fff;font-size:clamp(38px,4.6vw,66px);line-height:1.25;font-weight:900;max-width:16ch}
+.phero h1 em{font-style:normal;color:var(--red)}
+.phero p.lead{color:var(--line);font-size:clamp(17px,1.55vw,22px);line-height:1.75;max-width:720px}
+.phero .ctas{display:flex;gap:16px;margin-top:6px;flex-wrap:wrap}
+.phero .ctas .btn{font-size:20px;padding:20px 36px}
+.phero .ctas .btn-ghost{padding:18px 34px}
+.cards.six{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cards.six .card{min-height:0}
+.ready{padding:100px 0}
+.ready .wrap{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start}
+.ready .head{display:flex;flex-direction:column;gap:14px}
+.ready .head p{font-size:20px;color:var(--graphite);line-height:1.7}
+.ready ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ready li{border:1px solid var(--line);border-radius:16px;padding:18px 20px;font-size:18px;font-weight:500;display:flex;gap:12px;align-items:flex-start;line-height:1.5}
+.ready li::before{content:"";flex:0 0 10px;height:10px;border-radius:50%;background:var(--red);margin-top:8px}
+.faq{background:var(--soft);padding:100px 0}
+.faq .wrap{display:flex;flex-direction:column;gap:32px}
+.faq details{max-width:980px}
+.faq details{background:#fff;border-radius:18px;padding:0 28px}
+.faq summary{cursor:pointer;list-style:none;font-size:21px;font-weight:700;padding:24px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:28px;font-weight:400;color:var(--red);line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{font-size:18px;line-height:1.8;color:var(--graphite);padding:0 0 26px}
+.faq summary:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:8px}
+.cards a.card{transition:transform .2s,box-shadow .2s}
+.cards a.card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(22,22,22,.08)}
+.card .more{margin-top:auto;color:var(--red);font-weight:700;font-size:17px}
+@media (max-width:860px){
+  nav.main a.lnk{display:none}
+  .phero .wrap{padding-top:56px;padding-bottom:64px;gap:20px}
+  .phero .kicker{font-size:14px}
+  .phero .ctas{flex-direction:column}
+  .phero .ctas .btn{text-align:center;font-size:18px;padding:18px 0}
+  .cards.six{grid-template-columns:1fr}
+  .ready,.faq{padding:72px 0}
+  .ready .wrap{grid-template-columns:1fr;gap:24px}
+  .ready .head p{font-size:16px}
+  .ready ul{grid-template-columns:1fr;gap:10px}
+  .ready li{font-size:16px;padding:14px 16px}
+  .faq .wrap{gap:20px}
+  .faq details{padding:0 18px}
+  .faq summary{font-size:17px;padding:18px 0}
+  .faq details p{font-size:16px;padding-bottom:18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<a class="logo" href="../" aria-label="TARGETS — Home"><img src="../../assets/icon.svg" alt="" width="36" height="38"><span class="lat">TARGETS</span></a>
+<nav class="main" aria-label="Menu">
+<a class="lnk" href="../ads/">Ads</a>
+<a class="lnk on" href="../web/" aria-current="page">Websites & stores</a>
+<a class="lang" href="../../web/" hreflang="ar" lang="ar">عربي</a>
+<a class="btn btn-red" href="https://ig.me/m/targetsagency1" target="_blank" rel="noopener">Message us</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="phero" id="top">
+<div class="wrap">
+<p class="kicker">Websites · Online stores · Custom systems</p>
+<h1>Websites and stores that <em>sell</em>, not just look good.</h1>
+<p class="lead">We design and build your website or online store in Arabic and English, fast on mobile, and connected to WhatsApp and your ads from day one, so you know where every customer came from.</p>
+<div class="ctas">
+<a class="btn btn-red" href="https://ig.me/m/targetsagency1" target="_blank" rel="noopener">Message us</a>
+<a class="btn btn-ghost" href="#includes">What we build</a>
+</div>
+</div>
+</section>
+
+<section class="services" id="includes" aria-labelledby="inc-h">
+<div class="wrap">
+<h2 id="inc-h">What we build</h2>
+<div class="cards six">
+<article class="card"><span class="num lat">01</span><h3>Landing pages for ads</h3><p>One focused page for one offer, designed to turn ad visitors into messages or orders.</p></article>
+<article class="card"><span class="num lat">02</span><h3>Company websites</h3><p>A clear site that presents your services, answers your customers&#x27; questions and leads them to contact you, in two languages.</p></article>
+<article class="card"><span class="num lat">03</span><h3>Online stores</h3><p>Catalog, search, cart, customer accounts, order and inventory management, with local and international online payments.</p></article>
+<article class="card"><span class="num lat">04</span><h3>Custom systems</h3><p>Booking systems, dashboards, and order, property or customer management, built around the way you work.</p></article>
+<article class="card"><span class="num lat">05</span><h3>Integrations</h3><p>Connections to payment gateways (Lahza, eSadad, Stripe, PayPal), delivery companies, WhatsApp, analytics tools and the systems you already use.</p></article>
+<article class="card"><span class="num lat">06</span><h3>Upgrading an existing site</h3><p>Slow or outdated site? We speed it up, fix what&#x27;s broken and add what&#x27;s missing, without starting from scratch.</p></article>
+</div>
+</div>
+</section>
+
+<section class="ready" aria-labelledby="ready-h">
+<div class="wrap">
+<div class="head"><h2 id="ready-h">Every site is ad-ready from day one</h2><p>Because we run ads too, we build sites that serve your campaigns and measure their results:</p></div>
+<ul>
+<li>Fast and comfortable on mobile</li>
+<li>Arabic and English</li>
+<li>Direct WhatsApp and call buttons</li>
+<li>Meta, Google and TikTok tracking</li>
+<li>Local and international online payments</li>
+<li>Secure hosting, deployment and backups</li>
+</ul>
+</div>
+</section>
+
+<section class="process" aria-labelledby="process-h" style="padding-top:0">
+<div class="wrap">
+<h2 id="process-h">How we work</h2>
+<ol>
+<li><b>Understand the project</b><span>What you sell, who your customer is, and what a visitor should do on your site.</span></li>
+<li><b>Define the scope</b><span>Pages, features and priorities, with a clear timeline before we start.</span></li>
+<li><b>Design &amp; build</b><span>A design you see and approve first, then clean code that can grow.</span></li>
+<li><b>Launch &amp; support</b><span>We connect the domain, tracking and payments, and stay with you after launch.</span></li>
+</ol>
+</div>
+</section>
+
+<section class="faq" aria-labelledby="faq-h">
+<div class="wrap">
+<h2 id="faq-h">Common questions</h2>
+<details><summary>Can the store take local online payments?</summary><p>Yes. We connect local gateways such as Lahza and eSadad, international ones such as Stripe and PayPal, plus cash on delivery and delivery companies.</p></details>
+<details><summary>I already have a website. Can you improve it?</summary><p>Yes. We review your current site, recommend what to fix and what to rebuild, and improve it step by step so your business never stops.</p></details>
+<details><summary>How long does a website take?</summary><p>It depends on the size. A landing page is different from a full store or a custom system. Once we understand your project, we give you a clear timeline before we start.</p></details>
+<details><summary>Will the site and domain be in my name?</summary><p>Yes. The domain and accounts stay yours, and we hand over full admin access.</p></details>
+</div>
+</section>
+
+<section class="cta" aria-labelledby="cta-h">
+<div class="wrap">
+<h2 id="cta-h">Have a website or store in mind?</h2>
+<p>Tell us what you sell and what you need, and we&#x27;ll reply with a clear first step.</p>
+<a class="btn btn-red" href="https://ig.me/m/targetsagency1" target="_blank" rel="noopener">Message us</a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<a class="logo" href="../" aria-label="TARGETS"><img src="../../assets/icon.svg" alt="" width="28" height="29"><span class="lat">TARGETS</span></a>
+<nav aria-label="Our accounts">
+<a href="https://www.instagram.com/targetsagency1/" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.tiktok.com/@targetsagency.com" target="_blank" rel="noopener">TikTok</a>
+<a href="https://www.facebook.com/profile.php?id=61570720173324" target="_blank" rel="noopener">Facebook</a>
+<a href="../../privacy/#en">Privacy</a>
+<a href="../../web/" hreflang="ar" lang="ar">العربية</a>
+</nav>
+<small>© <span id="y">2026</span> Targets Agency</small>
+</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>

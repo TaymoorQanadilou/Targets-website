@@ -82,6 +82,9 @@ nav.main a.lang{color:var(--line);font-size:15px;font-weight:700;border:1.5px so
 .card .num{font-size:40px;color:var(--red);text-align:left}
 .card h3{font-size:28px;font-weight:800}
 .card p{font-size:19px;line-height:1.75;color:var(--graphite)}
+.cards.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+a.card{transition:transform .2s,box-shadow .2s}a.card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(22,22,22,.08)}
+.card .more{margin-top:auto;color:var(--red);font-weight:700;font-size:17px}
 
 /* process */
 .process{padding:110px 0}
@@ -140,7 +143,7 @@ footer small{color:var(--mid);font-size:15px;direction:ltr}
   .steps li{font-size:18px;padding:16px 20px;border-radius:14px;text-align:left}
   .funnel p{font-size:17px}
   .services .wrap,.process .wrap{gap:24px}
-  .cards{grid-template-columns:1fr;gap:20px}
+  .cards,.cards.four{grid-template-columns:1fr;gap:20px}
   .card{padding:28px;min-height:0;gap:12px;border-radius:20px}
   .card .num{font-size:32px}.card h3{font-size:23px}.card p{font-size:17px}
   .process ol{grid-template-columns:1fr;gap:22px}
@@ -165,9 +168,9 @@ footer small{color:var(--mid);font-size:15px;direction:ltr}
 <div class="wrap">
 <a class="logo" href="#top" aria-label="TARGETS — Home"><img src="../assets/icon.svg" alt="" width="36" height="38"><span class="lat">TARGETS</span></a>
 <nav class="main" aria-label="Menu">
-<a class="lnk" href="#services">Services</a>
+<a class="lnk" href="ads/">Ads</a>
+<a class="lnk" href="web/">Websites &amp; stores</a>
 <a class="lnk" href="#process">How we work</a>
-<a class="lnk" href="#sectors">Who we serve</a>
 <a class="lang" href="../" hreflang="ar" lang="ar">عربي</a>
 <a class="btn btn-red" href="https://ig.me/m/targetsagency1" target="_blank" rel="noopener">Message us</a>
 </nav>
@@ -206,10 +209,11 @@ footer small{color:var(--mid);font-size:15px;direction:ltr}
 <section class="services" id="services" aria-labelledby="services-h">
 <div class="wrap">
 <h2 id="services-h">What we do</h2>
-<div class="cards">
-<article class="card"><span class="num lat">01</span><h3>Ads management</h3><p>Meta, TikTok and Google campaigns built around a clear goal, with weekly monitoring and optimization.</p></article>
-<article class="card"><span class="num lat">02</span><h3>Content &amp; ad design</h3><p>Posts, videos and ads with a clear identity, written in your customer's language.</p></article>
-<article class="card"><span class="num lat">03</span><h3>Planning &amp; measurement</h3><p>Before we spend the first dollar, we define what success means, and measure it with the numbers that matter to you, not likes.</p></article>
+<div class="cards four">
+<a class="card" href="ads/"><span class="num lat">01</span><h3>Ads management</h3><p>Meta, TikTok and Google campaigns built around a clear goal, with weekly monitoring and optimization.</p><span class="more">Details →</span></a>
+<a class="card" href="web/"><span class="num lat">02</span><h3>Websites &amp; online stores</h3><p>Websites, online stores and custom systems in two languages, fast on mobile and connected to WhatsApp, ads and online payments.</p><span class="more">Details →</span></a>
+<article class="card"><span class="num lat">03</span><h3>Content &amp; ad design</h3><p>Posts, videos and ads with a clear identity, written in your customer's language.</p></article>
+<article class="card"><span class="num lat">04</span><h3>Planning &amp; measurement</h3><p>Before we spend the first dollar, we define what success means, and measure it with the numbers that matter to you, not likes.</p></article>
 </div>
 </div>
 </section>
@@ -266,6 +270,8 @@ footer small{color:var(--mid);font-size:15px;direction:ltr}
 <a href="https://www.tiktok.com/@targetsagency.com" target="_blank" rel="noopener">TikTok</a>
 <a href="https://www.facebook.com/profile.php?id=61570720173324" target="_blank" rel="noopener">Facebook</a>
 <!-- LinkedIn: add link when the page URL is ready -->
+<a href="ads/">Ads</a>
+<a href="web/">Websites</a>
 <a href="../privacy/#en">Privacy</a>
 <a href="../" hreflang="ar" lang="ar">العربية</a>
 </nav>
