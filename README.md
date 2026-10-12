@@ -38,7 +38,7 @@ Connect the repo and leave the build command empty. Set the publish directory to
 ## Before and after launch
 
 - The footer LinkedIn link is missing on purpose. Add it once the company page URL is ready.
-- Every contact button opens an Instagram DM at `https://ig.me/m/targetsagency1`. Replace them with WhatsApp once a business number exists.
+- Every contact button opens WhatsApp Business at `https://wa.me/962787562587` with a prefilled message per page (home / ads / web, Arabic or English) so incoming chats show which page they came from. The footer keeps the Instagram, TikTok and Facebook profile links.
 - After the site is live, paste the URL into the Facebook Sharing Debugger to check that the share preview image shows up.
 
 ## Audit checks
@@ -47,6 +47,6 @@ Run `python3 scripts/audit.py` from the repository root. No package installation
 
 For a browser check, serve the repository with `python3 -m http.server 8000` and visit all seven pages. Check 320, 375, 768, 860, 900, 1024, and 1440 CSS-pixel widths, keyboard skip links and FAQ controls, reduced motion, and JavaScript disabled. Font stylesheets should eventually have `media="all"` when JavaScript is enabled. Verify external contact redirects separately; Instagram DM requires an authenticated Instagram account. Email links open the visitor's mail app; a link audit does not verify mail delivery.
 
-When adding a page, give it a unique title/description and canonical URL, update `sitemap.xml`, and update the expected page count in `scripts/audit.py`. Keep Arabic/English alternate links reciprocal. Use the shared Organization identity; do not add a physical address, business phone or LocalBusiness claims until verified. There is no WhatsApp destination configured yet; the README's existing Instagram contact policy remains in effect.
+When adding a page, give it a unique title/description and canonical URL, update `sitemap.xml`, and update the expected page count in `scripts/audit.py`. Keep Arabic/English alternate links reciprocal. Use the shared Organization identity, including its WhatsApp `contactPoint` (+962787562587); do not add a physical address or LocalBusiness claims until verified.
 
 Cloudflare Pages deployment remains unchanged: no build command, repository root as the publish directory, no Functions/Worker, no dependencies, and no tracking scripts added by this repository.
