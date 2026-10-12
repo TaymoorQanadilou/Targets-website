@@ -49,4 +49,4 @@ For a browser check, serve the repository with `python3 -m http.server 8000` and
 
 When adding a page, give it a unique title/description and canonical URL, update `sitemap.xml`, and update the expected page count in `scripts/audit.py`. Keep Arabic/English alternate links reciprocal. Use the shared Organization identity, including its WhatsApp `contactPoint` (+962787562587); do not add a physical address or LocalBusiness claims until verified.
 
-Cloudflare Pages deployment remains unchanged: no build command, repository root as the publish directory, no Functions/Worker, no dependencies, and no tracking scripts added by this repository.
+Cloudflare Pages deployment remains unchanged: no build command, repository root as the publish directory, no Functions/Worker, and no dependencies. Every page loads the Google Ads tag (`AW-18506972459`) and `assets/track.js`, which reports clicks on WhatsApp links as the "WhatsApp click (website)" conversion. The privacy policy describes this.
