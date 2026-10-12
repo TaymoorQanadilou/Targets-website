@@ -1,5 +1,5 @@
 /* Shared accessibility and resilient layout; brand artwork stays unchanged. */
-body{overflow-wrap:anywhere}
+body{overflow-wrap:break-word}
 .wrap>*{min-width:0}
 :where(a,summary):focus-visible{outline:3px solid var(--ink);outline-offset:4px;box-shadow:0 0 0 7px #fff}
 [id]{scroll-margin-top:160px}
@@ -9,3 +9,5 @@ body{overflow-wrap:anywhere}
  html{scroll-behavior:auto}
  *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* Never break logo, language or button labels mid-word. */
+.logo,.logo span,header a,header .btn,.lang a,nav.main a{white-space:nowrap;overflow-wrap:normal;word-break:normal;flex-shrink:0}
