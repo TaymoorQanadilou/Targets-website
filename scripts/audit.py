@@ -61,7 +61,7 @@ class Page(HTMLParser):
 
 
 pages = {p.resolve(): Page(p) for p in ROOT.rglob('index.html')}
-assert len(pages) == 7, 'Update expected page count when adding routes'
+assert len(pages) == 9, 'Update expected page count when adding routes'
 canonicals, titles, descriptions = set(), set(), set()
 links_checked = 0
 for path, page in pages.items():
