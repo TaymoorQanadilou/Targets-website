@@ -10,6 +10,7 @@ The static landing page for **targetsagency.com**. There is no build step, no de
 | `ads/`, `web/`, `en/ads/`, `en/web/` | Localized service pages. |
 | `privacy/index.html` | Bilingual privacy policy. |
 | `assets/*.css` | Shared site/accessibility styles and home, services, and privacy styles. |
+| `assets/motion.css`, `assets/motion.js` | Calm motion: hero light rays, section reveal on scroll, animated border on the hero WhatsApp button. No dependencies; all of it is off under `prefers-reduced-motion`. |
 | `assets/icon.svg` | Logo mark, also used as the favicon. |
 | `assets/arch.svg` | Hero illustration. |
 | `assets/og.png` | 1200×630 social share preview image. |

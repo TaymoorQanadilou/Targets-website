@@ -1,0 +1,19 @@
+/* Calm motion layer. Every rule here is switched off for prefers-reduced-motion. */
+.mv-rays{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.hero,.phero{position:relative}
+.phero{overflow:hidden}
+.hero .wrap,.phero .wrap{position:relative;z-index:1}
+
+.mv-pre{opacity:0;transform:translateY(30px)}
+.mv-in{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+
+@media (prefers-reduced-motion:no-preference){
+ @property --mv-a{syntax:'<angle>';inherits:false;initial-value:0deg}
+ .hero .ctas .btn-red,.phero .ctas .btn-red{position:relative;isolation:isolate}
+ .hero .ctas .btn-red::after,.phero .ctas .btn-red::after{content:"";position:absolute;inset:-4px;border-radius:inherit;padding:3px;pointer-events:none;
+  background:conic-gradient(from var(--mv-a),transparent 0 72%,var(--coral) 88%,transparent 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
+  animation:mv-spin 7s linear infinite}
+ @keyframes mv-spin{to{--mv-a:360deg}}
+}
