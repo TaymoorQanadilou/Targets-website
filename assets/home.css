@@ -20,6 +20,7 @@
 .steps .arr{background:none;padding:0;color:var(--mid);font-size:28px;font-weight:400}
 .funnel p{font-size:22px;color:var(--graphite);line-height:1.7}
 .cards.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cards.four .card:nth-child(5){grid-column:1/-1}
 .sectors{background:var(--soft);padding:100px 0}
 .sectors .wrap{display:flex;flex-direction:column;gap:36px}
 .sectors .head{display:flex;flex-direction:column;gap:12px}
