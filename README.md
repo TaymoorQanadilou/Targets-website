@@ -8,6 +8,7 @@ The static landing page for **targetsagency.com**. There is no build step, no de
 |---|---|
 | `index.html`, `en/index.html` | Arabic/RTL and English/LTR homepages. |
 | `ads/`, `web/`, `en/ads/`, `en/web/` | Localized service pages. |
+| `automation/`, `en/automation/` | Automated replies page (benefits only; details by WhatsApp). |
 | `about/`, `en/about/` | About and contact page (WhatsApp, email, how we work). |
 | `privacy/index.html` | Bilingual privacy policy. |
 | `assets/*.css` | Shared site/accessibility styles and home, services, and privacy styles. |
