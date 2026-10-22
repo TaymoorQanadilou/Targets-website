@@ -102,7 +102,7 @@ for path, page in pages.items():
             other_alternates = {a['hreflang']: a['href'] for a in pages[other.resolve()].tags('link')
                                 if a.get('rel') == 'alternate'}
             assert other_alternates == alternates, (rel, 'nonreciprocal language alternate')
-    org = json.loads(''.join(page.structured))
+    org = json.JSONDecoder().raw_decode(''.join(page.structured).strip())[0]  # first block is the Organization
     assert org['@type'] == 'Organization' and org['url'] == ORIGIN + '/'
     assert org['@id'] == ORIGIN + '/#organization'
     for img in page.tags('img'):

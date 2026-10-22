@@ -12,6 +12,7 @@ The static landing page for **targetsagency.com**. There is no build step, no de
 | `about/`, `en/about/` | About and contact page (WhatsApp, email, how we work). |
 | `privacy/index.html` | Bilingual privacy policy. |
 | `assets/*.css` | Shared site/accessibility styles and home, services, and privacy styles. |
+| Site-wide extras | Mobile section links under the header (`.mnav`) and a floating WhatsApp button (`.wa-fab`) on every page except privacy. The homepage also has trust points, a free-review offer and an FAQ with FAQPage JSON-LD. |
 | `assets/motion.css`, `assets/motion.js` | Calm motion: hero light rays, section reveal on scroll, animated border on the hero WhatsApp button. No dependencies; all of it is off under `prefers-reduced-motion`. |
 | `assets/icon.svg` | Logo mark, also used as the favicon. |
 | `assets/arch.svg` | Hero illustration. |
