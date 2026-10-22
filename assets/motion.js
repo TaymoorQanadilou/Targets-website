@@ -105,3 +105,6 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
 })();
+
+/* Mobile section links: bring the current page's link into view */
+document.addEventListener('DOMContentLoaded',function(){var a=document.querySelector('.mnav a[aria-current="page"]');if(a&&a.parentNode.scrollWidth>a.parentNode.clientWidth){a.parentNode.scrollLeft+=a.getBoundingClientRect().left-a.parentNode.getBoundingClientRect().left-16;}});
