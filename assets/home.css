@@ -92,3 +92,4 @@ html[lang="en"] .about .big{text-align:left}
 .faq summary{font-size:17px;padding:18px 0}
 .faq details p{font-size:16px}
 }
+.blogteaser{background:#fff}.blogteaser .card{border:1px solid var(--line)}

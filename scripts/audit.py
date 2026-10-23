@@ -61,7 +61,7 @@ class Page(HTMLParser):
 
 
 pages = {p.resolve(): Page(p) for p in ROOT.rglob('index.html')}
-assert len(pages) == 13, 'Update expected page count when adding routes'
+assert len(pages) == 17, 'Update expected page count when adding routes'
 canonicals, titles, descriptions = set(), set(), set()
 links_checked = 0
 for path, page in pages.items():
@@ -93,7 +93,7 @@ for path, page in pages.items():
     assert page.metadata('og:url') == url
     alternates = {a['hreflang']: a['href'] for a in page.tags('link')
                   if a.get('rel') == 'alternate'}
-    if rel.parts[0] != 'privacy':
+    if rel.parts[0] not in ('privacy', 'blog'):  # Arabic-only sections
         assert set(alternates) == {'ar', 'en', 'x-default'}
         assert alternates[expected_lang] == url
         assert alternates['x-default'] == alternates['ar']
