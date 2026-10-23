@@ -8,6 +8,13 @@
 .mv-in{opacity:1;transform:none;transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
 
 @media (prefers-reduced-motion:no-preference){
+ .mv-w{opacity:0;filter:blur(8px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),filter .9s cubic-bezier(.22,.61,.36,1)}
+ .mv-words-in .mv-w{opacity:1;filter:none}
+ .hero .art img{animation:mv-float 9s ease-in-out infinite}
+ @keyframes mv-float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(4deg)}}
+ a.card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(22,22,22,.08)}
+ .wa-fab{animation:mv-pop .6s .8s cubic-bezier(.22,.61,.36,1) both}
+ @keyframes mv-pop{from{opacity:0;transform:translateY(16px) scale(.9)}to{opacity:1;transform:none}}
  @property --mv-a{syntax:'<angle>';inherits:false;initial-value:0deg}
  .hero .ctas .btn-red,.phero .ctas .btn-red{position:relative;isolation:isolate}
  .hero .ctas .btn-red::after,.phero .ctas .btn-red::after{content:"";position:absolute;inset:-4px;border-radius:inherit;padding:3px;pointer-events:none;
@@ -17,3 +24,7 @@
   animation:mv-spin 7s linear infinite}
  @keyframes mv-spin{to{--mv-a:360deg}}
 }
+/* Lenis smooth scroll (from lenis.css) */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}

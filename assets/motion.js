@@ -26,10 +26,12 @@
       });
     }, { rootMargin: '0px 0px -15% 0px', threshold: 0 });
     groups.forEach(function (sec) {
-      var kids = sec.querySelectorAll(':scope > .wrap > *');
-      kids.forEach(function (el, i) {
+      var kids = sec.querySelectorAll(':scope > .wrap > *:not(.cards):not(.steps):not(.chips):not(.olist), .cards > *, .steps > li:not(.arr), .chips > li, .olist > li, .faq details');
+      var n = 0;
+      kids.forEach(function (el) {
+        var i = n++ % 6;
         if (el.getBoundingClientRect().top < vh * 0.85) return; /* already on screen */
-        el.setAttribute('data-mv-i', i);
+        el.setAttribute('data-mv-i', el.matches('.cards > *, .steps > li, .chips > li, .olist > li, .faq details') ? i : 0);
         el.classList.add('mv-pre');
         io.observe(el);
       });
@@ -97,7 +99,69 @@
     requestAnimationFrame(loop);
   }
 
+
+  /* 3. Hero title: words fade in from a soft blur, one after another (words, never letters, so Arabic stays joined). */
+  function blurTitle() {
+    var h = document.querySelector('.hero h1, .phero h1, .post-head h1');
+    if (!h) return;
+    var k = 0, walker = document.createTreeWalker(h, NodeFilter.SHOW_TEXT), nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (t) {
+      var parts = t.nodeValue.split(/(\s+)/), frag = document.createDocumentFragment();
+      parts.forEach(function (w) {
+        if (!w) return;
+        if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
+        var sp = document.createElement('span');
+        sp.className = 'mv-w';
+        sp.style.transitionDelay = (0.15 + k++ * 0.09) + 's';
+        sp.textContent = w;
+        frag.appendChild(sp);
+      });
+      t.parentNode.replaceChild(frag, t);
+    });
+    requestAnimationFrame(function () { requestAnimationFrame(function () { h.classList.add('mv-words-in'); }); });
+  }
+
+  /* 4. Numbers count up once when they come into view (same final value and suffix). */
+  function countUp() {
+    if (!('IntersectionObserver' in window)) return;
+    document.querySelectorAll('.about .big').forEach(function (el) {
+      var m = /^(\D*)(\d+)(\D*)$/.exec(el.textContent.trim());
+      if (!m) return;
+      var end = +m[2], pre = m[1], suf = m[3];
+      el.textContent = pre + '0' + suf;
+      var io = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return;
+        io.disconnect();
+        var t0 = performance.now(), dur = 1200;
+        (function step(t) {
+          var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = pre + Math.round(end * e) + suf;
+          if (p < 1) requestAnimationFrame(step);
+        })(t0);
+      }, { threshold: 0.4 });
+      io.observe(el);
+    });
+  }
+
+  /* 5. Smooth scrolling (Lenis, loaded only when motion is allowed). */
+  function smooth() {
+    if (window.matchMedia('(pointer: coarse)').matches) return; /* keep native touch scroll on phones */
+    var sc = document.createElement('script');
+    sc.src = 'https://cdn.jsdelivr.net/npm/lenis@1.3.23/dist/lenis.min.js';
+    sc.async = true;
+    sc.onload = function () {
+      if (!window.Lenis || mq.matches) return;
+      var lenis = new window.Lenis({ duration: 1.1, smoothWheel: true, autoRaf: true, anchors: { offset: -100 } });
+      mq.addEventListener && mq.addEventListener('change', function () { if (mq.matches) lenis.destroy(); });
+    };
+    document.head.appendChild(sc);
+  }
+
   function start() {
+    blurTitle();
+    countUp();
+    smooth();
     reveal();
     var host = document.querySelector('.hero, .phero');
     if (host) rays(host);
