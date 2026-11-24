@@ -1,0 +1,79 @@
+/* Marsa Tales legal pages: system fonts only, no external requests. */
+:root{
+  --bg:#0E2A47;
+  --bg-deep:#0a1d33;
+  --card:#FFF8E7;
+  --ink:#1d2b3a;
+  --muted:#4a5868;
+  --accent:#E8A33D;
+  --link:#0b5aa3;
+  --on-dark:#FFF8E7;
+  --on-dark-muted:#cfd8e3;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:16px/1.7 -apple-system,BlinkMacSystemFont,system-ui,"Segoe UI",Tahoma,Arial,sans-serif;
+}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+
+/* Header */
+.site-header{background:var(--bg-deep);color:var(--on-dark);border-bottom:3px solid var(--accent)}
+.site-header .wrap{display:flex;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;color:var(--on-dark);text-decoration:none;min-width:0;flex:1 1 auto}
+.brand img{width:56px;height:56px;border-radius:14px;border:2px solid var(--accent);flex:0 0 auto;display:block}
+.brand strong{display:block;font-size:1.05rem;line-height:1.3}
+.brand span{display:block;font-size:.9rem;color:var(--on-dark-muted)}
+.lang-switch{display:flex;gap:6px;flex:0 0 auto}
+.lang-switch a{
+  color:var(--on-dark);text-decoration:none;border:2px solid var(--on-dark-muted);
+  border-radius:999px;padding:4px 12px;font-size:.9rem;line-height:1.4
+}
+.lang-switch a:hover{border-color:var(--accent)}
+html[data-lang="ar"] .lang-switch a[data-set-lang="ar"],
+html[data-lang="en"] .lang-switch a[data-set-lang="en"]{background:var(--accent);border-color:var(--accent);color:var(--bg-deep);font-weight:600}
+
+/* Content */
+main{padding:16px 0}
+section.card,.card{
+  background:var(--card);border-radius:16px;padding:20px 22px;margin:16px 0;border:3px solid var(--bg-deep)
+}
+h1{font-size:1.5rem;margin:.2em 0;line-height:1.35}
+h2{font-size:1.1rem;margin:1.2em 0 .3em}
+ul{padding-inline-start:1.2em}
+.note{font-size:.9rem;opacity:.75}
+.lead{font-size:1.05rem}
+.page-list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
+.page-list a{
+  display:block;background:var(--bg);color:var(--on-dark);text-decoration:none;border-radius:12px;
+  padding:12px 16px;border:2px solid var(--bg-deep);font-weight:600
+}
+.page-list a:hover{border-color:var(--accent)}
+.page-list small{display:block;font-weight:400;color:var(--on-dark-muted)}
+
+/* Footer */
+.site-footer{background:var(--bg-deep);color:var(--on-dark-muted);border-top:3px solid var(--accent);margin-top:24px;font-size:.92rem}
+.site-footer .wrap{padding-top:16px;padding-bottom:20px}
+.site-footer a{color:var(--on-dark)}
+.site-footer nav{display:flex;gap:8px 16px;flex-wrap:wrap;margin-bottom:8px}
+.site-footer p{margin:4px 0}
+
+/* Language toggle: without JavaScript both languages stay visible, Arabic first. */
+html[data-lang="ar"] .en{display:none !important}
+html[data-lang="en"] .ar{display:none !important}
+
+@media (max-width:420px){
+  body{font-size:15px}
+  .card{padding:16px}
+  .brand img{width:48px;height:48px}
+}
+@media print{
+  .site-header,.site-footer,.lang-switch{display:none}
+  body{background:#fff;color:#000}
+  .card{border:none;background:#fff;padding:0}
+}
